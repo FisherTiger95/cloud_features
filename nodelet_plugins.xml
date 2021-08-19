@@ -1,0 +1,7 @@
+<library path="lib/libCloudFeaturesNodelet">  
+    <class name="cloud_features/CloudFeaturesNodelet"            
+           type="cloud_features::CloudFeaturesNodelet"           
+           base_class_type="nodelet::Nodelet">     
+        <description>Convert cloud features.</description>     
+    </class> 
+</library>

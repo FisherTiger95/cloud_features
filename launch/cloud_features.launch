@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="standalone_nodelet"  args="manager" output="screen"/>
+
+  <node pkg="nodelet" type="nodelet" name="$(anon CloudFeaturesNodelet)" args="load cloud_features/CloudFeaturesNodelet standalone_nodelet" output="screen">
+    <param name="cloud_in_topic"    value="/os1_cloud" />
+    <param name="cloud_out_topic"   value="/cloud_out" />
+    <param name="vertical_fov"      value="1.57" />
+    <param name="horizontal_fov"    value="6.28" />
+    <param name="channels"          value="64" />
+    <param name="hz"                value="10" />
+    <param name="horizontal_points" value="1024" />
+  </node>
+</launch>
